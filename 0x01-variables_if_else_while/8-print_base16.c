@@ -1,12 +1,13 @@
 #include <stdio.h>
-
 /**
  * main - Entry point
  * Return:0
  */
 int main(void)
 {
-	int i, y;
+	int y;
+	int i;
+
 	for (i = 0; i < 10; i++)
 	{
 		putchar (i + '0');
