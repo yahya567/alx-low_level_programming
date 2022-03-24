@@ -1,23 +1,26 @@
 #include "main.h"
 
 /**
- * *_strcat - concatenates two strings
- * @dest: pointer destination
- * @src: pointer source
- * Return: void
+ * leet - encode
+ * @s: pointer to char params
+ * Return: *s
  */
 
-char *_strcat(char *dest, char *src)
+char *leet(char *s)
 {
-	int a = -1, i;
-	for (i = 0; dest[i] != '\0'; i++)
-		;
+	int i;
+	int j;
+	char l[] = "ol_ea__t";
 
-	do {
-		a++;
-		dest[i] = src[a];
-		i++;
-	} while (src[a] != '\0');
-
-	return (dest);
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; l[j] != '\0'; j++)
+		{
+			if (s[i] == l[j] || s[i] == (l[j] - 32))
+			{
+				s[i] = j + '0';
+			}
+		}
+	}
+	return (s);
 }
