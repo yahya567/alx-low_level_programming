@@ -1,21 +1,23 @@
 #include "main.h"
-/**
- * _strchr - locates a character in a string
- * @s: string to check
- * @c: character to check for
- *
- * Return: pointer to spot in s with c or null
- */
-char *_strchr(char *s, char c)
-{
-	int i;
 
-	for (i = 0; *(s + i); i++)
-	{
-		if (*(s + i) == c)
-			return (s + i);
-	}
-	if (*(s + i) == c)
-		return (s + i);
-	return (0);
+/**
+ * *_strcat - concatenates two strings
+ * @dest: pointer destination
+ * @src: pointer source
+ * Return: void
+ */
+
+char *_strcat(char *dest, char *src)
+{
+	int a = -1, i;
+	for (i = 0; dest[i] != '\0'; i++)
+		;
+
+	do {
+		a++;
+		dest[i] = src[a];
+		i++;
+	} while (src[a] != '\0');
+
+	return (dest);
 }
